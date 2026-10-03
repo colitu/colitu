@@ -9,8 +9,8 @@
 </p>
 
 <p align="center">
-  <a href="https://status.colitu.com"><img src="https://img.shields.io/endpoint?url=https%3A%2F%2Fstatus.colitu.com%2Fapi%2Fgithub-badge%3Fcomponent%3Dnetwork&style=for-the-badge" alt="VPN Network"></a>
-  <a href="https://status.colitu.com"><img src="https://img.shields.io/endpoint?url=https%3A%2F%2Fstatus.colitu.com%2Fapi%2Fgithub-badge%3Fcomponent%3Dapi&style=for-the-badge" alt="API"></a>
+  <a href="https://status.colitu.com"><img src="https://img.shields.io/endpoint?url=https://status.colitu.com/api/github-badge/network&style=for-the-badge" alt="VPN Network"></a>
+  <a href="https://status.colitu.com"><img src="https://img.shields.io/endpoint?url=https://status.colitu.com/api/github-badge/api&style=for-the-badge" alt="API"></a>
   <a href="https://colitu.com/open-source"><img src="https://img.shields.io/badge/Open%20Source-Android%20%C2%B7%20Windows%20%C2%B7%20Linux-7c6cff?style=for-the-badge&labelColor=101014" alt="Open Source"></a>
   <a href="https://github.com/colitu/colitu-android/blob/main/LICENSE"><img src="https://img.shields.io/badge/License-GPL--3.0-7c6cff?style=for-the-badge&labelColor=101014" alt="GPL-3.0"></a>
 </p>
@@ -31,16 +31,7 @@
 
 ## Network status
 
-<a href="https://status.colitu.com"><img src="https://status.colitu.com/api/github-badge?format=svg" alt="Colitu Network status"></a>
-
-<a href="https://status.colitu.com"><img src="https://status.colitu.com/api/github-badge?component=network&format=svg" alt="VPN Network"></a>
-<a href="https://status.colitu.com"><img src="https://status.colitu.com/api/github-badge?component=api&format=svg" alt="API"></a>
-<a href="https://status.colitu.com"><img src="https://status.colitu.com/api/github-badge?component=website&format=svg" alt="Website"></a>
-<a href="https://status.colitu.com"><img src="https://status.colitu.com/api/github-badge?component=downloads&format=svg" alt="Downloads"></a>
-
-These badges are live: they are drawn from the same checks as
-[status.colitu.com](https://status.colitu.com) and change on their own when a
-location or service goes down.
+<a href="https://status.colitu.com"><img src="https://status.colitu.com/api/github-badge/overall.svg" alt="Colitu Network status"></a>
 
 [View live network status →](https://status.colitu.com)
 
@@ -74,25 +65,59 @@ Downloads for every platform: [colitu.com/download](https://colitu.com/download)
 
 ---
 
-## Badges for your README
+## Live badges
 
-The status endpoint is public. Use it through shields.io:
+Ready to paste into any README. Every badge reads the same checks as
+[status.colitu.com](https://status.colitu.com) and changes on its own when something
+goes down (green → yellow → red).
+
+| Badge | Shows | Image |
+|---|---|---|
+| <img src="https://status.colitu.com/api/github-badge/overall.svg" alt="Colitu Network"> | Whole service: online locations, or *Major outage* | `status.colitu.com/api/github-badge/overall.svg` |
+| <img src="https://status.colitu.com/api/github-badge/network.svg" alt="VPN Network"> | Online VPN locations | `status.colitu.com/api/github-badge/network.svg` |
+| <img src="https://status.colitu.com/api/github-badge/api.svg" alt="API"> | Sign-in, accounts and the API the apps use | `status.colitu.com/api/github-badge/api.svg` |
+| <img src="https://status.colitu.com/api/github-badge/website.svg" alt="Website"> | colitu.com and the account portal | `status.colitu.com/api/github-badge/website.svg` |
+| <img src="https://status.colitu.com/api/github-badge/downloads.svg" alt="Downloads"> | Installers and auto-update files | `status.colitu.com/api/github-badge/downloads.svg` |
+| <img src="https://status.colitu.com/api/github-badge/payments.svg" alt="Payments"> | Checkout and payment methods | `status.colitu.com/api/github-badge/payments.svg` |
+| <img src="https://status.colitu.com/api/github-badge/docs.svg" alt="Docs"> | docs.colitu.com help centre | `status.colitu.com/api/github-badge/docs.svg` |
+
+**Colitu style** — the whole set in one line:
 
 ```markdown
-[![Colitu Network](https://img.shields.io/endpoint?url=https%3A%2F%2Fstatus.colitu.com%2Fapi%2Fgithub-badge&style=for-the-badge)](https://status.colitu.com)
+[![Colitu Network](https://status.colitu.com/api/github-badge/overall.svg)](https://status.colitu.com)
+[![VPN Network](https://status.colitu.com/api/github-badge/network.svg)](https://status.colitu.com)
+[![API](https://status.colitu.com/api/github-badge/api.svg)](https://status.colitu.com)
+[![Website](https://status.colitu.com/api/github-badge/website.svg)](https://status.colitu.com)
+[![Downloads](https://status.colitu.com/api/github-badge/downloads.svg)](https://status.colitu.com)
 ```
 
-or as Colitu's own badge image:
+**shields.io style:**
 
 ```markdown
-[![Colitu Network](https://status.colitu.com/api/github-badge?format=svg)](https://status.colitu.com)
+[![Network](https://img.shields.io/endpoint?url=https://status.colitu.com/api/github-badge/network)](https://status.colitu.com)
 ```
 
-| Parameter | Values |
+Add `&style=for-the-badge` (or `flat-square`, `plastic`) to the shields.io URL to change its look.
+
+<details>
+<summary>Endpoint reference</summary>
+
+| URL | Returns |
 |---|---|
-| `component` | `overall` (default), `network`, `api`, `website`, `downloads`, `payments`, `docs` |
-| `format` | `shields` (default, shields.io endpoint JSON), `svg` (badge image), `full` (all components and locations as JSON) |
-| `label` | optional label text, up to 32 characters |
+| `/api/github-badge/<name>` | shields.io endpoint JSON (`schemaVersion`, `label`, `message`, `color`) |
+| `/api/github-badge/<name>.svg` | the Colitu badge image |
+| `/api/github-badge/<name>.json` | every component and location with its state, plus all badge links |
+
+`<name>` is one of `overall`, `network`, `api`, `website`, `downloads`, `payments`, `docs`.
+Add `?label=Text` to change the label (up to 32 characters). Responses are cached for two minutes.
+
+During a full outage the overall badge reads:
+
+```json
+{ "schemaVersion": 1, "label": "Colitu Network", "message": "Major outage", "color": "red" }
+```
+
+</details>
 
 ---
 
