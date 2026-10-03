@@ -81,45 +81,7 @@ goes down (green → yellow → red).
 | <img src="https://status.colitu.com/api/github-badge/payments.svg" alt="Payments"> | Checkout and payment methods | `status.colitu.com/api/github-badge/payments.svg` |
 | <img src="https://status.colitu.com/api/github-badge/docs.svg" alt="Docs"> | docs.colitu.com help centre | `status.colitu.com/api/github-badge/docs.svg` |
 
-**Colitu style** — the whole set in one line:
 
-```markdown
-[![Colitu Network](https://status.colitu.com/api/github-badge/overall.svg)](https://status.colitu.com)
-[![VPN Network](https://status.colitu.com/api/github-badge/network.svg)](https://status.colitu.com)
-[![API](https://status.colitu.com/api/github-badge/api.svg)](https://status.colitu.com)
-[![Website](https://status.colitu.com/api/github-badge/website.svg)](https://status.colitu.com)
-[![Downloads](https://status.colitu.com/api/github-badge/downloads.svg)](https://status.colitu.com)
-```
-
-**shields.io style:**
-
-```markdown
-[![Network](https://img.shields.io/endpoint?url=https://status.colitu.com/api/github-badge/network)](https://status.colitu.com)
-```
-
-Add `&style=for-the-badge` (or `flat-square`, `plastic`) to the shields.io URL to change its look.
-
-<details>
-<summary>Endpoint reference</summary>
-
-| URL | Returns |
-|---|---|
-| `/api/github-badge/<name>` | shields.io endpoint JSON (`schemaVersion`, `label`, `message`, `color`) |
-| `/api/github-badge/<name>.svg` | the Colitu badge image |
-| `/api/github-badge/<name>.json` | every component and location with its state, plus all badge links |
-
-`<name>` is one of `overall`, `network`, `api`, `website`, `downloads`, `payments`, `docs`.
-Add `?label=Text` to change the label (up to 32 characters). Responses are cached for two minutes.
-
-During a full outage the overall badge reads:
-
-```json
-{ "schemaVersion": 1, "label": "Colitu Network", "message": "Major outage", "color": "red" }
-```
-
-</details>
-
----
 
 ## Open source
 
