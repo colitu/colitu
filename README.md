@@ -11,7 +11,7 @@
 <p align="center">
   <a href="https://status.colitu.com"><img src="https://img.shields.io/endpoint?url=https://status.colitu.com/api/github-badge/network&style=for-the-badge" alt="VPN Network"></a>
   <a href="https://status.colitu.com"><img src="https://img.shields.io/endpoint?url=https://status.colitu.com/api/github-badge/api&style=for-the-badge" alt="API"></a>
-  <a href="https://colitu.com/open-source"><img src="https://img.shields.io/badge/Open%20Source-Android%20%C2%B7%20Windows%20%C2%B7%20Linux-7c6cff?style=for-the-badge&labelColor=101014" alt="Open Source"></a>
+  <a href="https://colitu.com/open-source"><img src="https://img.shields.io/badge/Open%20Source-Android%20%C2%B7%20iOS%20%C2%B7%20Windows%20%C2%B7%20Linux-7c6cff?style=for-the-badge&labelColor=101014" alt="Open Source"></a>
   <a href="https://github.com/colitu/android/blob/main/LICENSE"><img src="https://img.shields.io/badge/License-GPL--3.0-7c6cff?style=for-the-badge&labelColor=101014" alt="GPL-3.0"></a>
 </p>
 
@@ -59,7 +59,8 @@ actually carries traffic on your network.
 | Android & Android TV | [colitu/android](https://github.com/colitu/android) | [![Android CI](https://img.shields.io/github/actions/workflow/status/colitu/android/ci.yml?branch=main&style=flat-square&label=build&labelColor=101014)](https://github.com/colitu/android/actions/workflows/ci.yml) | [![Release](https://img.shields.io/github/v/release/colitu/android?style=flat-square&labelColor=101014&color=7c6cff)](https://github.com/colitu/android/releases/latest) |
 | Windows | [colitu/windows](https://github.com/colitu/windows) | [![Windows build](https://img.shields.io/github/actions/workflow/status/colitu/windows/build.yml?branch=main&style=flat-square&label=build&labelColor=101014)](https://github.com/colitu/windows/actions/workflows/build.yml) | [![Release](https://img.shields.io/github/v/release/colitu/windows?style=flat-square&labelColor=101014&color=7c6cff)](https://github.com/colitu/windows/releases/latest) |
 | Linux | [colitu/linux](https://github.com/colitu/linux) | [![Linux tests](https://img.shields.io/github/actions/workflow/status/colitu/linux/test.yml?branch=main&style=flat-square&label=build&labelColor=101014)](https://github.com/colitu/linux/actions/workflows/test.yml) | [![Release](https://img.shields.io/github/v/release/colitu/linux?include_prereleases&style=flat-square&labelColor=101014&color=7c6cff)](https://github.com/colitu/linux/releases) |
-| iOS | — | — | [TestFlight beta](https://colitu.com/download/ios) |
+| iOS & iPadOS | [colitu/ios](https://github.com/colitu/ios) | [![iOS CI](https://img.shields.io/github/actions/workflow/status/colitu/ios/ci.yml?branch=main&style=flat-square&label=build&labelColor=101014)](https://github.com/colitu/ios/actions/workflows/ci.yml) | [![Release](https://img.shields.io/github/v/release/colitu/ios?style=flat-square&labelColor=101014&color=7c6cff)](https://github.com/colitu/ios/releases/latest) |
+| Chrome & Firefox extension | [colitu/extension](https://github.com/colitu/extension) | [![Extension CI](https://img.shields.io/github/actions/workflow/status/colitu/extension/ci.yml?branch=main&style=flat-square&label=build&labelColor=101014)](https://github.com/colitu/extension/actions/workflows/ci.yml) | [![Release](https://img.shields.io/github/v/release/colitu/extension?style=flat-square&labelColor=101014&color=7c6cff)](https://github.com/colitu/extension/releases/latest) |
 
 Downloads for every platform: [colitu.com/download](https://colitu.com/download)
 
@@ -85,9 +86,14 @@ goes down (green → yellow → red).
 
 ## Open source
 
-The Android, Windows and Linux apps are open source under the GPL-3.0 license. Release
-builds can be checked against their source: every GitHub release carries
-`SHA256SUMS`, and [colitu.com/open-source](https://colitu.com/open-source)
+The Android, iOS, Windows and Linux apps and the browser extension are open source
+under the GPL-3.0 license. Release builds can be checked against their source: every
+GitHub release carries `SHA256SUMS`, and [colitu.com/open-source](https://colitu.com/open-source)
 explains how to verify a download.
 
-Security issues: [security@colitu.com](mailto:security@colitu.com)
+[colitu/vpn-lab](https://github.com/colitu/vpn-lab) (MIT) holds the reproducible
+protocol tests behind our "Can It Survive?" videos.
+
+- Contributing: read the `CONTRIBUTING.md` of the repository you want to change.
+- Help with your account or connection: [colitu.com/support](https://colitu.com/support)
+- Security issues: [security@colitu.com](mailto:security@colitu.com) — please do not open public issues.
